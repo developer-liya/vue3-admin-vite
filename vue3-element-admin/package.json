@@ -30,8 +30,8 @@
     "vue-tsc": "^0.0.8"
   },
   "husky": {
-      "hooks": {
-        "commit-msg": "commitlint -e $GIT_PARAMS"
-      }
+    "hooks": {
+      "commit-msg": "commitlint -e $GIT_PARAMS"
+    }
   }
 }
