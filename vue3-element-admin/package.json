@@ -29,7 +29,6 @@
     "vite-plugin-mock": "^2.5.0",
     "vue-tsc": "^0.0.8"
   },
-
   "husky": {
       "hooks": {
         "commit-msg": "commitlint -e $GIT_PARAMS"
