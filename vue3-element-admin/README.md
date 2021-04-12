@@ -25,3 +25,7 @@ Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
 3. Open `src/main.ts` in VSCode
 4. Open the VSCode command palette
 5. Search and run "Select TypeScript version" -> "Use workspace version"
+
+
+
+git commit 相关约束  npm install -g commitizen cz-conventional-changelog 
