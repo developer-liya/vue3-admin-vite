@@ -28,4 +28,37 @@ Run `Volar: Switch TS Plugin on/off` from VSCode command palette.
 
 
 
-git commit 相关约束  npm install -g commitizen cz-conventional-changelog 
+### git commit 相关约束  执行如下操作
+npm install -g commitizen cz-conventional-changelog 
+echo '{ "path": "cz-conventional-changelog" }' > ~/.czrc
+安装完毕后，可直接使用git cz来取代git commit。
+全局模式下，需要 ~/.czrc 配置文件, 为commitizen指定Adapter。
+
+commit 工具使用
+# 主要type
+feat:     增加新功能
+fix:      修复bug
+ 
+# 特殊type
+docs:     只改动了文档相关的内容
+style:    不影响代码含义的改动，例如去掉空格、改变缩进、增删分号
+build:    构造工具的或者外部依赖的改动，例如webpack，npm
+refactor: 代码重构时使用
+revert:   执行git revert打印的message
+ 
+# 暂不使用type
+test:     添加测试或者修改现有测试
+perf:     提高性能的改动
+ci:       与CI（持续集成服务）有关的改动
+chore:    不修改src或者test的其余修改，例如构建过程或辅助工具的变动
+
+
+### 项目内安装commitlint & husky 
+commitlint负责用于对commit message进行格式校验，husky负责提供更易用的git hook。
+
+Use npm
+npm i -D husky @commitlint/config-conventional @commitlint/cli
+ 
+Use yarn
+yarn add husky @commitlint/config-conventional @commitlint/cli -D
+
